@@ -1,0 +1,21 @@
+---
+- name: Install nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+
+- name: Deploy Nginx subdomain proxy configuration
+  ansible.builtin.template:
+    src: "{{ role_path }}/templates/nginx.conf.j2" 
+    dest: "/etc/nginx/sites-available/{{ item.subdomain }}.{{ top_level_domain }}.conf"
+  notify: Reload nginx
+  loop: "{{ reverse_proxy }}" 
+
+- name: Enable Nginx subdomain proxy
+  ansible.builtin.file:
+    src: "/etc/nginx/sites-available/{{ item.subdomain }}.{{ top_level_domain }}.conf"
+    dest: "/etc/nginx/sites-enabled/{{ item.subdomain }}.{{ top_level_domain }}.conf"
+    state: link
+  notify: Reload nginx
+  loop: "{{ reverse_proxy }}" 
+

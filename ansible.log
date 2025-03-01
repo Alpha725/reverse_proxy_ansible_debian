@@ -1,0 +1,383 @@
+2025-03-01 20:24:04,475 p=1152511 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 20:24:04,523 p=1152511 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 20:24:07,150 p=1152511 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 20:24:07,191 p=1152511 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 20:24:07,312 p=1152511 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 20:24:08,009 p=1152511 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 20:24:08,035 p=1152511 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 20:24:08,089 p=1152511 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 20:24:11,820 p=1152511 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 20:24:11,833 p=1152511 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 20:24:12,363 p=1152511 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 20:24:12,374 p=1152511 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 20:24:12,390 p=1152511 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 20:24:12,397 p=1152511 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 20:24:13,529 p=1152511 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 20:24:13,554 p=1152511 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 20:24:13,608 p=1152511 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-01 20:24:21,233 p=1152511 u=alex n=ansible | changed: [172.16.0.2]
+2025-03-01 20:24:21,290 p=1152511 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-01 20:24:21,290 p=1152511 u=alex n=ansible | 172.16.0.2                 : ok=6    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-03-01 21:01:20,730 p=2578732 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 21:01:20,759 p=2578732 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 21:01:22,888 p=2578732 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:01:22,925 p=2578732 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 21:01:23,050 p=2578732 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 21:01:23,735 p=2578732 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:01:23,762 p=2578732 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 21:01:23,813 p=2578732 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 21:01:26,278 p=2578732 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:01:26,292 p=2578732 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 21:01:26,815 p=2578732 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:01:26,831 p=2578732 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 21:01:26,847 p=2578732 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 21:01:26,861 p=2578732 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 21:01:28,004 p=2578732 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:01:28,030 p=2578732 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 21:01:28,072 p=2578732 u=alex n=ansible | ERROR! 'listen' is not a valid attribute for a Task
+
+The error appears to be in '/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/tasks/main.yaml': line 22, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Reload Nginx
+  ^ here
+
+This error can be suppressed as a warning using the "invalid_task_attribute_failed" configuration
+
+The error appears to be in '/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/tasks/main.yaml': line 22, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Reload Nginx
+  ^ here
+
+2025-03-01 21:04:15,296 p=2689624 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 21:04:15,324 p=2689624 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 21:04:17,376 p=2689624 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:04:17,397 p=2689624 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 21:04:17,474 p=2689624 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 21:04:18,101 p=2689624 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:04:18,111 p=2689624 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 21:04:18,137 p=2689624 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 21:04:20,400 p=2689624 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:04:20,409 p=2689624 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 21:04:20,920 p=2689624 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:04:20,931 p=2689624 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 21:04:20,949 p=2689624 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 21:04:20,958 p=2689624 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 21:04:22,084 p=2689624 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:04:22,110 p=2689624 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 21:04:22,146 p=2689624 u=alex n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/tasks/main.yaml': line 22, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+handlers:
+^ here
+
+2025-03-01 21:07:02,239 p=2796003 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 21:07:02,268 p=2796003 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 21:07:04,288 p=2796003 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:07:04,311 p=2796003 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 21:07:04,401 p=2796003 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 21:07:05,079 p=2796003 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:07:05,093 p=2796003 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 21:07:05,127 p=2796003 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 21:07:07,408 p=2796003 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:07:07,422 p=2796003 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 21:07:07,992 p=2796003 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:07:08,001 p=2796003 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 21:07:08,017 p=2796003 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 21:07:08,023 p=2796003 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 21:07:09,111 p=2796003 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:07:09,136 p=2796003 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 21:07:09,173 p=2796003 u=alex n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/tasks/main.yaml': line 22, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+handlers:
+^ here
+
+2025-03-01 21:08:11,474 p=2840299 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 21:08:11,504 p=2840299 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 21:08:13,311 p=2840299 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:08:13,348 p=2840299 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 21:08:13,444 p=2840299 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 21:08:14,176 p=2840299 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:08:14,192 p=2840299 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 21:08:14,230 p=2840299 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 21:08:16,637 p=2840299 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:08:16,651 p=2840299 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 21:08:17,181 p=2840299 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:08:17,196 p=2840299 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 21:08:17,213 p=2840299 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 21:08:17,226 p=2840299 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 21:08:18,359 p=2840299 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:08:18,384 p=2840299 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 21:08:18,443 p=2840299 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-01 21:08:19,434 p=2840299 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:08:19,453 p=2840299 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-01 21:08:19,471 p=2840299 u=alex n=ansible | fatal: [172.16.0.2]: FAILED! => {"msg": "'reverse_proxy' is undefined. 'reverse_proxy' is undefined"}
+2025-03-01 21:08:19,473 p=2840299 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-01 21:08:19,473 p=2840299 u=alex n=ansible | 172.16.0.2                 : ok=6    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-03-01 21:09:11,961 p=2879089 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 21:09:11,991 p=2879089 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 21:09:13,553 p=2879089 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:09:13,591 p=2879089 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 21:09:13,685 p=2879089 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 21:09:14,443 p=2879089 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:09:14,467 p=2879089 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 21:09:14,519 p=2879089 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 21:09:16,880 p=2879089 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:09:16,894 p=2879089 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 21:09:17,478 p=2879089 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:09:17,484 p=2879089 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 21:09:17,500 p=2879089 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 21:09:17,505 p=2879089 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 21:09:18,640 p=2879089 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:09:18,667 p=2879089 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 21:09:18,726 p=2879089 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-01 21:09:19,506 p=2879089 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:09:19,514 p=2879089 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-01 21:09:19,601 p=2879089 u=alex n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2025-03-01 21:09:19,601 p=2879089 u=alex n=ansible | failed: [172.16.0.2] (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '8080'}) => {"ansible_loop_var": "item", "changed": false, "item": {"subdomain": "kb", "upstream_port": "8080", "upstream_server": "10.0.0.10"}, "msg": "Could not find or access 'subdomain.conf.j2'\nSearched in:\n\t/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/templates/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/tasks/templates/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/tasks/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/templates/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/subdomain.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2025-03-01 21:09:19,604 p=2879089 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-01 21:09:19,604 p=2879089 u=alex n=ansible | 172.16.0.2                 : ok=6    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-03-01 21:10:11,712 p=2917541 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 21:10:11,739 p=2917541 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 21:10:13,361 p=2917541 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:10:13,397 p=2917541 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 21:10:13,481 p=2917541 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 21:10:14,186 p=2917541 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:10:14,198 p=2917541 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 21:10:14,227 p=2917541 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 21:10:16,579 p=2917541 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:10:16,592 p=2917541 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 21:10:17,051 p=2917541 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:10:17,067 p=2917541 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 21:10:17,083 p=2917541 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 21:10:17,096 p=2917541 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 21:10:18,098 p=2917541 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:10:18,112 p=2917541 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 21:10:18,150 p=2917541 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-01 21:10:19,101 p=2917541 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:10:19,116 p=2917541 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-01 21:10:19,205 p=2917541 u=alex n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2025-03-01 21:10:19,206 p=2917541 u=alex n=ansible | failed: [172.16.0.2] (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '8080'}) => {"ansible_loop_var": "item", "changed": false, "item": {"subdomain": "kb", "upstream_port": "8080", "upstream_server": "10.0.0.10"}, "msg": "Could not find or access 'subdomain.conf.j2'\nSearched in:\n\t/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/templates/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/tasks/templates/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/roles/nginx_setup/tasks/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/templates/subdomain.conf.j2\n\t/home/alex/code/reverse_proxy_ansible_debian/subdomain.conf.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2025-03-01 21:10:19,210 p=2917541 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-01 21:10:19,210 p=2917541 u=alex n=ansible | 172.16.0.2                 : ok=6    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-03-01 21:11:58,288 p=2985374 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 21:11:58,317 p=2985374 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 21:12:00,571 p=2985374 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:12:00,615 p=2985374 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 21:12:00,741 p=2985374 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 21:12:01,456 p=2985374 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:12:01,470 p=2985374 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 21:12:01,501 p=2985374 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 21:12:03,580 p=2985374 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:12:03,588 p=2985374 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 21:12:04,102 p=2985374 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:12:04,110 p=2985374 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 21:12:04,126 p=2985374 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 21:12:04,133 p=2985374 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 21:12:05,184 p=2985374 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:12:05,197 p=2985374 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 21:12:05,232 p=2985374 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-01 21:12:06,166 p=2985374 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:12:06,174 p=2985374 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-01 21:12:07,102 p=2985374 u=alex n=ansible | changed: [172.16.0.2] => (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '8080'})
+2025-03-01 21:12:07,118 p=2985374 u=alex n=ansible | TASK [nginx_setup : Enable Nginx subdomain proxy] **************************************************************************************
+2025-03-01 21:12:07,698 p=2985374 u=alex n=ansible | failed: [172.16.0.2] (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '8080'}) => {"ansible_loop_var": "item", "changed": false, "item": {"subdomain": "kb", "upstream_port": "8080", "upstream_server": "10.0.0.10"}, "msg": "src file does not exist, use \"force=yes\" if you really want to create the link: /etc/nginx/sites-available/kb.spagheit.com.conf", "path": "/etc/nginx/sites-enabled/kb.spagheit.com.conf", "src": "/etc/nginx/sites-available/kb.spagheit.com.conf"}
+2025-03-01 21:12:07,701 p=2985374 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-01 21:12:07,702 p=2985374 u=alex n=ansible | 172.16.0.2                 : ok=7    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-03-01 21:14:07,236 p=3068344 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 21:14:07,265 p=3068344 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 21:14:09,309 p=3068344 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:14:09,347 p=3068344 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 21:14:09,442 p=3068344 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 21:14:10,167 p=3068344 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:14:10,192 p=3068344 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 21:14:10,246 p=3068344 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 21:14:12,659 p=3068344 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:14:12,673 p=3068344 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 21:14:13,192 p=3068344 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:14:13,207 p=3068344 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 21:14:13,224 p=3068344 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 21:14:13,238 p=3068344 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 21:14:14,324 p=3068344 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:14:14,349 p=3068344 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 21:14:14,404 p=3068344 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-01 21:14:15,372 p=3068344 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:14:15,388 p=3068344 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-01 21:14:16,389 p=3068344 u=alex n=ansible | changed: [172.16.0.2] => (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '8080'})
+2025-03-01 21:14:16,405 p=3068344 u=alex n=ansible | TASK [nginx_setup : Enable Nginx subdomain proxy] **************************************************************************************
+2025-03-01 21:14:16,933 p=3068344 u=alex n=ansible | changed: [172.16.0.2] => (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '8080'})
+2025-03-01 21:14:16,984 p=3068344 u=alex n=ansible | RUNNING HANDLER [nginx_setup : Reload nginx] *******************************************************************************************
+2025-03-01 21:14:17,866 p=3068344 u=alex n=ansible | changed: [172.16.0.2]
+2025-03-01 21:14:17,892 p=3068344 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-01 21:14:17,892 p=3068344 u=alex n=ansible | 172.16.0.2                 : ok=9    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-03-01 21:16:38,433 p=3165441 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 21:16:38,464 p=3165441 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 21:16:40,797 p=3165441 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:16:40,841 p=3165441 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 21:16:40,963 p=3165441 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 21:16:41,611 p=3165441 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:16:41,639 p=3165441 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 21:16:41,691 p=3165441 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 21:16:44,173 p=3165441 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:16:44,187 p=3165441 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 21:16:44,711 p=3165441 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:16:44,726 p=3165441 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 21:16:44,745 p=3165441 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 21:16:44,758 p=3165441 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 21:16:45,903 p=3165441 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:16:45,929 p=3165441 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 21:16:45,986 p=3165441 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-01 21:16:46,946 p=3165441 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 21:16:46,961 p=3165441 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-01 21:16:47,955 p=3165441 u=alex n=ansible | ok: [172.16.0.2] => (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '8080'})
+2025-03-01 21:16:47,970 p=3165441 u=alex n=ansible | TASK [nginx_setup : Enable Nginx subdomain proxy] **************************************************************************************
+2025-03-01 21:16:48,397 p=3165441 u=alex n=ansible | ok: [172.16.0.2] => (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '8080'})
+2025-03-01 21:16:48,454 p=3165441 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-01 21:16:48,454 p=3165441 u=alex n=ansible | 172.16.0.2                 : ok=8    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-03-01 22:03:25,691 p=782760 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-01 22:03:25,720 p=782760 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-01 22:03:27,968 p=782760 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 22:03:27,990 p=782760 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-01 22:03:28,104 p=782760 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-01 22:03:28,815 p=782760 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 22:03:28,841 p=782760 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-01 22:03:28,895 p=782760 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-01 22:03:31,394 p=782760 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 22:03:31,408 p=782760 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-01 22:03:31,950 p=782760 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 22:03:31,965 p=782760 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-01 22:03:31,983 p=782760 u=alex n=ansible | skipping: [172.16.0.2]
+2025-03-01 22:03:31,996 p=782760 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-01 22:03:33,137 p=782760 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 22:03:33,163 p=782760 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-01 22:03:33,222 p=782760 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-01 22:03:34,202 p=782760 u=alex n=ansible | ok: [172.16.0.2]
+2025-03-01 22:03:34,217 p=782760 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-01 22:03:35,232 p=782760 u=alex n=ansible | changed: [172.16.0.2] => (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '9090'})
+2025-03-01 22:03:35,247 p=782760 u=alex n=ansible | TASK [nginx_setup : Enable Nginx subdomain proxy] **************************************************************************************
+2025-03-01 22:03:35,816 p=782760 u=alex n=ansible | ok: [172.16.0.2] => (item={'subdomain': 'kb', 'upstream_server': '10.0.0.10', 'upstream_port': '9090'})
+2025-03-01 22:03:35,864 p=782760 u=alex n=ansible | RUNNING HANDLER [nginx_setup : Reload nginx] *******************************************************************************************
+2025-03-01 22:03:36,818 p=782760 u=alex n=ansible | changed: [172.16.0.2]
+2025-03-01 22:03:36,838 p=782760 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-01 22:03:36,839 p=782760 u=alex n=ansible | 172.16.0.2                 : ok=9    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-03-02 10:05:51,857 p=2476958 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-02 10:05:51,885 p=2476958 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-02 10:05:52,228 p=2476958 u=alex n=ansible | fatal: [13.239.63.170]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '13.239.63.170' (ED25519) to the list of known hosts.\r\nalex@13.239.63.170: Permission denied (publickey).", "unreachable": true}
+2025-03-02 10:05:52,230 p=2476958 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-02 10:05:52,231 p=2476958 u=alex n=ansible | 13.239.63.170              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-02 10:06:03,854 p=2484517 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-02 10:06:03,883 p=2484517 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-02 10:06:05,726 p=2484517 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:06:05,762 p=2484517 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-02 10:06:05,866 p=2484517 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-02 10:06:06,607 p=2484517 u=alex n=ansible | changed: [13.239.63.170]
+2025-03-02 10:06:06,622 p=2484517 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-02 10:06:06,656 p=2484517 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-02 10:07:06,541 p=2484517 u=alex n=ansible | changed: [13.239.63.170]
+2025-03-02 10:07:06,556 p=2484517 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-02 10:07:07,232 p=2484517 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:07:07,248 p=2484517 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-02 10:07:23,447 p=2484517 u=alex n=ansible | changed: [13.239.63.170]
+2025-03-02 10:07:23,461 p=2484517 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-02 10:07:24,886 p=2484517 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:07:24,902 p=2484517 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-02 10:07:24,942 p=2484517 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-02 10:07:29,722 p=2484517 u=alex n=ansible | changed: [13.239.63.170]
+2025-03-02 10:07:29,739 p=2484517 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-02 10:07:30,859 p=2484517 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'kb', 'upstream_server': '127.0.0.1', 'upstream_port': '8080'})
+2025-03-02 10:07:31,797 p=2484517 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'web', 'upstream_server': '127.0.0.1', 'upstream_port': '8081'})
+2025-03-02 10:07:32,750 p=2484517 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'home', 'upstream_server': '127.0.0.1', 'upstream_port': '8082'})
+2025-03-02 10:07:32,766 p=2484517 u=alex n=ansible | TASK [nginx_setup : Enable Nginx subdomain proxy] **************************************************************************************
+2025-03-02 10:07:33,408 p=2484517 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'kb', 'upstream_server': '127.0.0.1', 'upstream_port': '8080'})
+2025-03-02 10:07:33,882 p=2484517 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'web', 'upstream_server': '127.0.0.1', 'upstream_port': '8081'})
+2025-03-02 10:07:34,336 p=2484517 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'home', 'upstream_server': '127.0.0.1', 'upstream_port': '8082'})
+2025-03-02 10:07:34,384 p=2484517 u=alex n=ansible | RUNNING HANDLER [nginx_setup : Reload nginx] *******************************************************************************************
+2025-03-02 10:07:35,361 p=2484517 u=alex n=ansible | changed: [13.239.63.170]
+2025-03-02 10:07:35,385 p=2484517 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-02 10:07:35,385 p=2484517 u=alex n=ansible | 13.239.63.170              : ok=10   changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-03-02 10:13:00,153 p=2746928 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-02 10:13:00,183 p=2746928 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-02 10:13:02,015 p=2746928 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:13:02,052 p=2746928 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-02 10:13:02,146 p=2746928 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-02 10:13:02,886 p=2746928 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:13:02,910 p=2746928 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-02 10:13:02,962 p=2746928 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-02 10:13:04,988 p=2746928 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:13:04,996 p=2746928 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-02 10:13:05,597 p=2746928 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:13:05,613 p=2746928 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-02 10:13:05,632 p=2746928 u=alex n=ansible | skipping: [13.239.63.170]
+2025-03-02 10:13:05,645 p=2746928 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-02 10:13:06,653 p=2746928 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:13:06,678 p=2746928 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-02 10:13:06,735 p=2746928 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-02 10:13:07,618 p=2746928 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:13:07,632 p=2746928 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-02 10:13:08,820 p=2746928 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'kb', 'upstream_server': '127.0.0.1', 'upstream_port': '8080'})
+2025-03-02 10:13:09,767 p=2746928 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'web', 'upstream_server': '127.0.0.1', 'upstream_port': '8081'})
+2025-03-02 10:13:10,740 p=2746928 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'home', 'upstream_server': '127.0.0.1', 'upstream_port': '8082'})
+2025-03-02 10:13:10,756 p=2746928 u=alex n=ansible | TASK [nginx_setup : Enable Nginx subdomain proxy] **************************************************************************************
+2025-03-02 10:13:11,443 p=2746928 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'kb', 'upstream_server': '127.0.0.1', 'upstream_port': '8080'})
+2025-03-02 10:13:11,918 p=2746928 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'web', 'upstream_server': '127.0.0.1', 'upstream_port': '8081'})
+2025-03-02 10:13:12,382 p=2746928 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'home', 'upstream_server': '127.0.0.1', 'upstream_port': '8082'})
+2025-03-02 10:13:12,430 p=2746928 u=alex n=ansible | RUNNING HANDLER [nginx_setup : Reload nginx] *******************************************************************************************
+2025-03-02 10:13:13,331 p=2746928 u=alex n=ansible | changed: [13.239.63.170]
+2025-03-02 10:13:13,356 p=2746928 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-02 10:13:13,356 p=2746928 u=alex n=ansible | 13.239.63.170              : ok=9    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-03-02 10:14:42,480 p=2809567 u=alex n=ansible | PLAY [all] *****************************************************************************************************************************
+2025-03-02 10:14:42,508 p=2809567 u=alex n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2025-03-02 10:14:44,143 p=2809567 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:14:44,178 p=2809567 u=alex n=ansible | TASK [include_role : set_timezone] *****************************************************************************************************
+2025-03-02 10:14:44,268 p=2809567 u=alex n=ansible | TASK [set_timezone : Set timezone] *****************************************************************************************************
+2025-03-02 10:14:44,941 p=2809567 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:14:44,964 p=2809567 u=alex n=ansible | TASK [include_role : patch] ************************************************************************************************************
+2025-03-02 10:14:45,015 p=2809567 u=alex n=ansible | TASK [patch : Upgrade software] ********************************************************************************************************
+2025-03-02 10:14:46,679 p=2809567 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:14:46,693 p=2809567 u=alex n=ansible | TASK [patch : Check if a reboot is required] *******************************************************************************************
+2025-03-02 10:14:47,349 p=2809567 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:14:47,359 p=2809567 u=alex n=ansible | TASK [patch : Reboot server if required] ***********************************************************************************************
+2025-03-02 10:14:47,375 p=2809567 u=alex n=ansible | skipping: [13.239.63.170]
+2025-03-02 10:14:47,383 p=2809567 u=alex n=ansible | TASK [patch : Apt autoremove] **********************************************************************************************************
+2025-03-02 10:14:48,399 p=2809567 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:14:48,425 p=2809567 u=alex n=ansible | TASK [include_role : nginx_setup] ******************************************************************************************************
+2025-03-02 10:14:48,482 p=2809567 u=alex n=ansible | TASK [nginx_setup : Install nginx] *****************************************************************************************************
+2025-03-02 10:14:49,416 p=2809567 u=alex n=ansible | ok: [13.239.63.170]
+2025-03-02 10:14:49,431 p=2809567 u=alex n=ansible | TASK [nginx_setup : Deploy Nginx subdomain proxy configuration] ************************************************************************
+2025-03-02 10:14:50,547 p=2809567 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'kb', 'upstream_server': '127.0.0.1', 'upstream_port': '8080'})
+2025-03-02 10:14:51,472 p=2809567 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'web', 'upstream_server': '127.0.0.1', 'upstream_port': '8081'})
+2025-03-02 10:14:52,394 p=2809567 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'home', 'upstream_server': '127.0.0.1', 'upstream_port': '8082'})
+2025-03-02 10:14:52,416 p=2809567 u=alex n=ansible | TASK [nginx_setup : Enable Nginx subdomain proxy] **************************************************************************************
+2025-03-02 10:14:53,047 p=2809567 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'kb', 'upstream_server': '127.0.0.1', 'upstream_port': '8080'})
+2025-03-02 10:14:53,498 p=2809567 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'web', 'upstream_server': '127.0.0.1', 'upstream_port': '8081'})
+2025-03-02 10:14:53,971 p=2809567 u=alex n=ansible | changed: [13.239.63.170] => (item={'subdomain': 'home', 'upstream_server': '127.0.0.1', 'upstream_port': '8082'})
+2025-03-02 10:14:54,001 p=2809567 u=alex n=ansible | RUNNING HANDLER [nginx_setup : Reload nginx] *******************************************************************************************
+2025-03-02 10:14:54,970 p=2809567 u=alex n=ansible | changed: [13.239.63.170]
+2025-03-02 10:14:54,995 p=2809567 u=alex n=ansible | PLAY RECAP *****************************************************************************************************************************
+2025-03-02 10:14:54,996 p=2809567 u=alex n=ansible | 13.239.63.170              : ok=9    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

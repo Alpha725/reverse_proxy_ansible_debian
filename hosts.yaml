@@ -1,0 +1,13 @@
+all:
+  children:
+    dwm:
+      hosts:
+        172.16.0.2:
+      vars:
+        ansible_user: admin
+        timezone: Australia/Sydney
+        top_level_domain: spagheit.com 
+        reverse_proxy:
+          - {subdomain: "kb", upstream_server: "127.0.0.1", upstream_port: "8080"}
+          - {subdomain: "web", upstream_server: "127.0.0.1", upstream_port: "8081"}
+          - {subdomain: "home", upstream_server: "127.0.0.1", upstream_port: "8082"}
