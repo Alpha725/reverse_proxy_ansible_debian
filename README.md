@@ -12,6 +12,8 @@ You will also need to setup an ssh key auth to the host. I am not explaining how
 
 You will then need to update the `hosts.yaml` ansible_user to your `${username}` and then the ip address of the host/hosts address.
 
+You will also need to add your subdomains, ssl certs and ssl keys to the config too. 
+
 Once you have done all the above run the following command:
 ```bash
 ansible-playbook site.yaml
