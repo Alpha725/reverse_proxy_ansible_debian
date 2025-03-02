@@ -4,10 +4,20 @@ all:
       hosts:
         172.16.0.2:
       vars:
-        ansible_user: admin
+        ansible_user: alex
         timezone: Australia/Sydney
         top_level_domain: spagheit.com 
         reverse_proxy:
           - {subdomain: "kb", upstream_server: "127.0.0.1", upstream_port: "8080"}
           - {subdomain: "web", upstream_server: "127.0.0.1", upstream_port: "8081"}
           - {subdomain: "home", upstream_server: "127.0.0.1", upstream_port: "8082"}
+        reverse_proxy_ssl:
+          - {subdomain: "secure", upstream_server: "127.0.0.1", upstream_port: "8080"}
+        ssl_certificate: 
+          name: "somecert.crt"
+          src: "{{ playbook_dir }}" 
+          dest: "/etc/ssl/certs"
+        ssl_key: 
+          name: "somecert.key"
+          src: "{{ playbook_dir }}"
+          dest: "/etc/ssl/private"

@@ -1,2 +1,4 @@
 # Ansible logs
 ./ansible.log
+./*.crt
+./*.key
