@@ -23,7 +23,7 @@
       loop: "{{ reverse_proxy }}" 
 
 - name: Configure https reverse proxy
-  when: reverse_proxy is defined and reverse_proxy_ssl | length > 0
+  when: reverse_proxy_ssl is defined and reverse_proxy_ssl | length > 0
   block:
     - name: copy certificate onto server
       ansible.builtin.copy:
@@ -33,7 +33,7 @@
         owner: root
         group: root
 
-    - name: copy certificate onto server
+    - name: copy key onto server
       ansible.builtin.copy:
         src: "{{ ssl_key.src }}/{{ ssl_key.name }}" 
         dest: "{{ ssl_key.dest }}" 
